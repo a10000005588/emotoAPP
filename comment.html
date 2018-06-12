@@ -1,0 +1,70 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+        <title>Emoto Demo</title>
+        <!-- 引入 FrozenUI -->
+        <link rel="stylesheet" href="http://i.gtimg.cn/vipstyle/frozenui/2.0.0/css/frozen.css"/>
+        <link rel="stylesheet" href="assets/css/style.css"/>
+        <link rel="stylesheet" href="assets/css/comment.css"/>
+        <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+        <script src="assets/js/comment.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h2 class="title">行程结束</h2>
+        </div>
+        <div class="ui-loading-block success">
+            <div class="ui-loading-cnt">
+                <i class="ui-loading-bright"></i>
+                <p>評價成功</p>
+            </div>
+        </div>
+
+        <div class="ui-loading-block show">
+            <div class="ui-loading-cnt">
+                <i class="ui-loading-bright"></i>
+                <p>正在提交</p>
+            </div>
+        </div>
+
+        <section class="absolute-panel">
+            <div class="header">
+                <span class="backward" style="background-image:url(assets/i/close.png)" onclick="history.back()"></span>
+                <h2 class="title">評價</h2>
+            </div>
+            <ul class="ui-row star">
+                <li class="ui-col ui-col-12 offset-20" style="padding-top: 24px;">
+                    <img style="width: 44px;" src="assets/i/star.png">
+                </li>
+                <li class="ui-col ui-col-12" style="padding-top: 24px;">
+                    <img style="width: 44px;" src="assets/i/star.png">
+                </li>
+                <li class="ui-col ui-col-12" style="padding-top: 24px;">
+                    <img style="width: 44px;" src="assets/i/star.png">
+                </li>
+                <li class="ui-col ui-col-12" style="padding-top: 24px;">
+                    <img style="width: 44px;" src="assets/i/star.png">
+                </li>
+                <li class="ui-col ui-col-12" style="padding-top: 24px;">
+                    <img style="width: 44px;" src="assets/i/star.png">
+                </li>
+
+                <li class="ui-col ui-col-100 text-center comment">比較滿意，仍可改善</li>
+
+
+                
+
+            </ul>
+            <div class="textarea">
+                <input type="text" placeholder="其他想说的" id="mycomment" name="comment">
+            </div>
+            <div class="button comment-submit">
+                <button class="ui-btn-lg-nowhole ui-btn-primary">匿名提交</button>
+            </div>
+        </section>
+
+        
+    </body>
+</html>

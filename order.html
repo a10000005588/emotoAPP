@@ -1,0 +1,128 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+        <title>Emoto Demo</title>
+        <!-- 引入 FrozenUI -->
+        <link rel="stylesheet" href="http://i.gtimg.cn/vipstyle/frozenui/2.0.0/css/frozen.css"/>
+        <link rel="stylesheet" href="assets/css/style.css"/>
+        <link rel="stylesheet" href="assets/css/order.css"/>
+        <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+        <script src="assets/js/order.js"></script>
+        <script src="assets/js/comment.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h2 class="title">行程中</h2>
+        </div>
+        <div class="ui-loading-block success">
+            <div class="ui-loading-cnt">
+                <i class="ui-loading-bright"></i>
+                <p>评价&支付成功</p>
+				
+            </div>
+        </div>
+        <div class="ui-loading-block ing">
+            <div class="ui-loading-cnt">
+                <i class="ui-loading-bright"></i>
+                <p>正在提交</p>
+            </div>
+        </div>
+
+        <div class="ui-loading-block show">
+            <div class="ui-loading-cnt">
+                <i class="ui-loading-bright"></i>
+                <p>准备支付</p>
+            </div>
+        </div>
+
+        <section class="absolute-panel" id="list">
+            <ul class="ui-row">
+                <li class="ui-col ui-col-45">
+                    <h3 class="b-2c" style="padding: 36px 0 3px 18px;">京QF49203</h3>
+                    <h3 class="r-ac"  style="padding-left: 18px;">Gogoro 2 水漾藍</h3>
+                </li>
+                <li class="ui-col ui-col-40" style="padding-top: 16px;margin-left:-15px;">
+                    <img style="width: 85%;" src="assets/i/driver.png">
+                </li>
+                <li class="ui-col ui-col-15" style="padding-top: 24px;">
+                    <h3 class="r-2c" style="margin-top: 5px;">王小明</h3>
+                    <img style="width: 12px;margin:-1px 0 4px 0;" src="assets/i/star.png">
+                    <h3 class="tag TG">五星司机</h3>
+                </li>
+                <li class="ui-col ui-col-100 border_bottom"></li>
+                <li class="ui-col ui-col-33 small text-center">发消息</li>
+                <li class="ui-col ui-col-33 small text-center">打电话</li>
+                <li class="ui-col ui-col-33 small text-center">联系客服</li>
+                <li class="ui-col ui-col-100 border_bottom"></li>
+
+                <div class="preview">
+                    <h1 class="price text-center">1.50</h1>
+                </div>
+                
+
+            </ul>
+            <div class="button pay">
+                <button class="ui-btn-lg-nowhole ui-btn-primary">评价并支付</button>
+            </div>
+        </section>
+
+        <section class="absolute-panel2">
+            <div class="header">
+                <span class="backward" style="background-image:url(assets/i/close.png)" onclick="history.back()"></span>
+                <h2 class="title">评价</h2>
+            </div>
+            <ul class="ui-row star">
+                <li class="ui-col ui-col-12 offset-20" style="padding-top: 24px;">
+                    <img style="width: 44px;" src="assets/i/star.png">
+                </li>
+                <li class="ui-col ui-col-12" style="padding-top: 24px;">
+                    <img style="width: 44px;" src="assets/i/star.png">
+                </li>
+                <li class="ui-col ui-col-12" style="padding-top: 24px;">
+                    <img style="width: 44px;" src="assets/i/star.png">
+                </li>
+                <li class="ui-col ui-col-12" style="padding-top: 24px;">
+                    <img style="width: 44px;" src="assets/i/star.png">
+                </li>
+                <li class="ui-col ui-col-12" style="padding-top: 24px;">
+                    <img style="width: 44px;" src="assets/i/star.png">
+                </li>
+
+                <li class="ui-col ui-col-100 text-center comment">比较满意，仍可改善</li>
+
+
+                
+
+            </ul>
+            <div class="textarea">
+                <input type="text" placeholder="其他想说的" id="mycomment" name="comment">
+            </div>
+            <div class="button comment-submit">
+                <button class="ui-btn-lg-nowhole ui-btn-primary">匿名提交</button>
+            </div>
+        </section>
+		
+		
+		<section class="absolute-panel3">
+            <div class="header">
+                <a href="driver_select.html"><span class="backward" style="background-image:url(assets/i/close.png)"></span></a>
+                <h2 class="title">交易結果</h2>
+            </div>
+            <ul class="ui-row">
+                <li class="ui-col ui-col-100 border_bottom"></li>
+                <li class="ui-col ui-col-100 text-center">交易ID</li>
+                <li class="ui-col ui-col-100 text-center" style="display: inline; word-wrap:break-word;" id="tx_return"></li>
+                <li class="ui-col ui-col-100 border_bottom"></li>
+				<li class="ui-col ui-col-100 text-center">金額</li>
+                <li class="ui-col ui-col-100 text-center" style="display: inline; word-wrap:break-word;" id="tx_money">100</li>
+                <li class="ui-col ui-col-100 border_bottom"></li>
+				<li class="ui-col ui-col-100 text-center">您給的評價</li>
+                <li class="ui-col ui-col-100 text-center" style="display: inline; word-wrap:break-word;" id="tx_comment">YAY</li>
+                <li class="ui-col ui-col-100 border_bottom"></li>
+            </ul>
+        </section>
+        
+    </body>
+</html>

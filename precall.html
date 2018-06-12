@@ -1,0 +1,45 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+        <title>Emoto Demo</title>
+        <!-- 引入 FrozenUI -->
+        <link rel="stylesheet" href="http://i.gtimg.cn/vipstyle/frozenui/2.0.0/css/frozen.css"/>
+        <link rel="stylesheet" href="assets/css/style.css"/>
+        <link rel="stylesheet" href="assets/css/precall.css"/>
+        <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+        <script src="assets/js/precall.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <span class="backward" style="background-image:url(assets/i/back.png)" onclick="history.back()"></span>
+            <h2 class="title">确认呼叫</h2>
+        </div>
+        <div class="ui-loading-block show">
+            <div class="ui-loading-cnt">
+                <i class="ui-loading-bright"></i>
+                <p>正在叫车</p>
+            </div>
+        </div>
+        <section class="absolute-panel">
+            <ul class="ui-row">
+                <div class="preview">
+                    <img  src="assets/i/moto.png">
+                    <h1 class="price text-center">0.0018</h1>
+                </div>
+                
+                <li class="ui-col ui-col-25"></li>
+                <li class="ui-col ui-col-100 border_bottom"></li>
+                <li class="ui-col ui-col-50 small text-center">ether支付</li>
+                <li class="ui-col ui-col-50 small text-center">联系客服</li>
+
+            </ul>
+            <div class="button call">
+                <button class="ui-btn-lg-nowhole ui-btn-primary">确认呼叫</button>
+            </div>
+        </section>
+
+        
+    </body>
+</html>
