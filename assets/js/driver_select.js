@@ -84,6 +84,16 @@ jQuery(document).ready(function($) {
 											</div>\
 										</li>';
 							}
+							var nickName = "優秀司機"
+							var score = Math.round(res[i].credit);
+							switch(score) {
+								case 0: nickName = "劣質司機"; break;
+								case 1: nickName = "不太優司機"; break;
+								case 2: nickName = "普通司機"; break;
+								case 3: nickName = "普通司機"; break;
+								case 4: nickName = "特優司機"; break;
+								case 5: nickName = "五星司機"; break;
+							}
 							
 							var div = 	'<section class="panel">\
 											<ul class="ui-row">\
@@ -96,14 +106,14 @@ jQuery(document).ready(function($) {
 												</li>\
 												<li class="ui-col ui-col-15">\
 													<h3 class="r-2c" style="margin-top: 5px;">' +　res[i].driverName　+ '</h3>\
-													<img style="width: 12px;margin:-1px 0 4px 0;" src="assets/i/star.png">\
-													<h3 class="tag TG">五星司機</h3>\
+													<h3 class="r-2c" style="margin-top: 5px;">信用:' + res[i].credit + '</h3>\
+													<h3 class="tag TG">'+nickName+'</h3>\
 												</li>\
 												<li class="ui-col ui-col-100 border_bottom"></li>\
 												<li class="ui-col ui-col-50 b-2c">距離1.2km | 4分鐘到達</li>\
 												<li class="ui-col ui-col-25 r-2c text-right show_comment' + i + '" onclick="open_comment(' + i + ')">查看詳情</li>\
 												<li class="ui-col ui-col-25 r-2c text-right comment' + i + ' hid_comment' + i + '" style="display: none;" onclick="close_comment(' + i + ')">收起</li>\
-												<li class="ui-col ui-col-25 r-2c text-right show_detail" plate="' + res[i].plate +'" address="' + res[i].driverAddress +'" name="' + res[i].driverName +'" >選擇司機</li>\
+												<li class="ui-col ui-col-25 r-2c text-right show_detail" plate="' + res[i].plate +'" address="' + res[i].driverAddress +'" name="' + res[i].driverName +'" credit="'+res[i].credit+'">選擇司機</li>\
 												<li class="ui-col ui-col-100 border comment' + i + '" style="margin: 20px 0;display: none;">\
 													<ul class="ui-list ui-border-tb ">' + str + '</ul>\
 												</li>\
@@ -115,16 +125,17 @@ jQuery(document).ready(function($) {
 							$('#list').html(list);
 							
 							$(".show_detail").click(function(){
-							
 								var driver=new Array();
 								driver[0] = this.getAttribute("address");
 								driver[1] = this.getAttribute("name");
 								driver[2] = this.getAttribute("plate");
-								
+								driver[3] = this.getAttribute("credit");
+																
 								localStorage.setItem("address", driver[0]);
 								localStorage.setItem("name", driver[1]);
 								localStorage.setItem("plate", driver[2]);
-								
+								localStorage.setItem("credit", driver[3]);
+
 								setCookie('driver',driver,365,"/");
 								x = getCookie('driver');
 								console.log(x);

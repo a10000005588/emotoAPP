@@ -35,9 +35,9 @@ jQuery(document).ready(function($) {
 	                    <img style="width: 85%;" src="assets/i/driver.png">\
 	                </li>\
 	                <li class="ui-col ui-col-15" style="padding-top: 24px;">\
-	                    <h3 class="r-2c" style="margin-top: 5px;">' + localStorage.getItem("name") + '</h3>\
-	                    <img style="width: 12px;margin:-1px 0 4px 0;" src="assets/i/star.png">\
-	                    <h3 class="tag TG">五星司機</h3>\
+						<h3 class="r-2c" style="margin-top: 5px;">' + localStorage.getItem("name") + '</h3>\
+						<h3 class="r-2c" style="margin-top: 5px;">信用: ' + localStorage.getItem("credit") + '</h3>\
+	                    <h3 class="tag TG">優秀司機</h3>\
 	                </li>\
 	                <li class="ui-col ui-col-100 border_bottom"></li>\
 	                <li class="ui-col ui-col-33 small text-center">發消息</li>\

@@ -24,20 +24,14 @@ jQuery(document).ready(function($) {
 
 		setTimeout('pay()',2000);
 		setTimeout('link()',2000);
-		var payment = new Array();
-		payment[0] = "0x45c78ec57a6590ac0c1d414963574c6f53310875";
-		payment[1] = "Ken";
-		payment[2] = "";
-		payment[3] = "";
-		payment[4] = "0.0018";
-		payment[5] = "3";
+	
 		var jsonpayment = {
 			"driverAddress": localStorage.getItem("address"),
-		    "driverName": "王大陸",
-		    "userName": "王小明",
-		    "userAddress": "0x0a68808f5803882e69e66804c75172c873a09f24",
+		    "driverName": localStorage.getItem("name"),
+		    "userName": "Will",
+		    "userAddress": "0xd508d26c26464274a045abca32c3c54ae8a4c35f",
 		    "fee": 0.15,
-		    "credit" : 5,
+		    "credit" : localStorage.getItem("credit"),
 			"comment": document.getElementById("mycomment").value
 		};
 		console.log(jsonpayment);
@@ -65,7 +59,8 @@ jQuery(document).ready(function($) {
 	});
 
 	$(".star li").click(function () {
-	    var k = $(".star li").index(this);
+		var k = $(".star li").index(this);
+		localStorage.setItem("credit", k+1);
 	    for (var i = 0; i < k+1; i++) {
 	    	$(".star li").eq(i).html('<img style="width: 44px;" src="assets/i/fullstar.png">');
 	    }
