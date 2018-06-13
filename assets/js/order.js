@@ -26,6 +26,17 @@ jQuery(document).ready(function($) {
 	console.log(x);
 	var m = x.split(",");
 	console.log(m);
+
+	var nickName = "優秀司機"
+	var score = Math.round(localStorage.getItem("credit"));
+	switch(score) {
+		case 0: nickName = "劣質司機"; break;
+		case 1: nickName = "不太優司機"; break;
+		case 2: nickName = "普通司機"; break;
+		case 3: nickName = "普通司機"; break;
+		case 4: nickName = "特優司機"; break;
+		case 5: nickName = "五星司機"; break;
+	}
 	var list = '<ul class="ui-row">\
 	                <li class="ui-col ui-col-45">\
 	                    <h3 class="b-2c" style="padding: 36px 0 3px 18px;">' + localStorage.getItem("plate") + '</h3>\
@@ -37,7 +48,7 @@ jQuery(document).ready(function($) {
 	                <li class="ui-col ui-col-15" style="padding-top: 24px;">\
 						<h3 class="r-2c" style="margin-top: 5px;">' + localStorage.getItem("name") + '</h3>\
 						<h3 class="r-2c" style="margin-top: 5px;">信用: ' + localStorage.getItem("credit") + '</h3>\
-	                    <h3 class="tag TG">優秀司機</h3>\
+	                    <h3 class="tag TG">'+nickName+'</h3>\
 	                </li>\
 	                <li class="ui-col ui-col-100 border_bottom"></li>\
 	                <li class="ui-col ui-col-33 small text-center">發消息</li>\
